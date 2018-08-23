@@ -37,9 +37,7 @@ class Pagination extends React.Component {
     render() {
 
         if (this.props.totalCount === 0) {
-            return (
-                <div />
-            )
+            return (<div />)
         }
         let arr = [];
         let start, end;
@@ -60,6 +58,7 @@ class Pagination extends React.Component {
         for (let i = start; i <= end; i++) {
             arr.push(i);
         }
+        
         return (
             <nav aria-label="Page navigation example">
                 <ul onClick={this.onClick} className="pagination justify-content-center">

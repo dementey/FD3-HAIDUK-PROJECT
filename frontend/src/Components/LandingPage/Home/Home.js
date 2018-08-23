@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchForm from '../SearchPage/SearchPage';
+import SearchForm from './SearchForm/SearchForm';
 
 import img from './frontPage.png';
 

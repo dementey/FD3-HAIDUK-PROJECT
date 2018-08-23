@@ -71,15 +71,15 @@ class ProductPres extends Component {
 
                 </GridList>
 
-                <Pagination 
-                pageNumber={this.props.pageNumber} t
-                otalCount={Math.ceil(totalCount / nPerPage)} />
+                <Pagination
+                    pageNumber={this.props.pageNumber} 
+                    otalCount={Math.ceil(totalCount / nPerPage)} />
 
                 <br />
 
-                <ScrollButton 
-                scrollStepInPx="80" 
-                delayInMs="10" />
+                <ScrollButton
+                    scrollStepInPx="80"
+                    delayInMs="10" />
 
             </div>
         );

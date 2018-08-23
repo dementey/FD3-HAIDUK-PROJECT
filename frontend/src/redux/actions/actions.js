@@ -41,6 +41,7 @@ export function getCountAction(count) {
 }
 
 export function getCount(url) {
+
     return (dispatch) => {
         fetch(url)
             .then(response => response.json())
@@ -50,6 +51,7 @@ export function getCount(url) {
 }
 
 export function query(url) {
+    console.log('function query(url) '+url);
     return (dispatch) => {
         dispatch(itemsIsLoading(true));
 

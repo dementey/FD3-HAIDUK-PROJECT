@@ -4,6 +4,7 @@ import thunk from 'redux-thunk';//https://medium.com/@gethylgeorge/understanding
 //https://github.com/rajdee/redux-in-russian/blob/master/docs/advanced/AsyncActions.md
 //https://github.com/rajdee/redux-in-russian/blob/master/docs/advanced/Middleware.md
 //https://medium.com/fullstack-academy/thunks-in-redux-the-basics-85e538a3fe60
+// redux-thunk позволяет генераторам действий инвертировать управление вызывая функции.
 
 export default function configureStore() {
     return createStore(
@@ -11,3 +12,4 @@ export default function configureStore() {
         applyMiddleware(thunk)
     );
 };
+

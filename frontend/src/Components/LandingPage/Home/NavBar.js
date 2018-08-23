@@ -25,7 +25,7 @@ const NavBar = () =>
             <li className="nav-item nav-li">
                 <Button component={toHome} color="primary">
                     Начало
-            </Button>
+                </Button>
             </li>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
