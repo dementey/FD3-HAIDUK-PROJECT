@@ -5,16 +5,16 @@ import {
     Route
 } from 'react-router-dom';
 
-import NavBar from './Components/NavPage/NavBar';
-import Footer from './Components/NavPage/Footer';
+import NavBar from './Components/LandingPage/Home/NavBar';
+import Footer from './Components/LandingPage/Home/Footer';
 
-import About from './Components/NavPage/About';
-import Home from './Components/NavPage/Home';
-import SearchPage from './Components/SearchPage/SearchPage';
-import IngreCheck from './Components/IngredientsCheck/IngredientsCheck';
-import NotFound from './Components/NavPage/NotFound';
+import About from './Components/LandingPage/About/About';
+import Home from './Components/LandingPage/Home/Home';
+import SearchPage from './Components/LandingPage/SearchPage/SearchPage';
+import IngreCheck from './Components/LandingPage/IngredientsCheck/IngredientsCheck';
+import NotFound from './Components/LandingPage/NotFound/NotFound';
 
-import './Main.css';
+//import './Main.css';
 
 const Main = () =>
     <Router>
