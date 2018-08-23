@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import ProductInfo from '../ProductInfoPage/ProductInfo';
 
-import Card, {CardContent, CardMedia} from 'material-ui/Card';
+import Card, { CardContent, CardMedia } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
 import Avatar from 'material-ui/Avatar';
 
@@ -27,7 +27,7 @@ class Product extends React.Component {
     };
 
     handleClose = value => {
-        this.setState({open: false});
+        this.setState({ open: false });
     };
 
     render() {
@@ -56,7 +56,7 @@ class Product extends React.Component {
                                 right: '10px',
                                 top: '10px',
                                 margin: 10,
-                                backgroundColor: 'green',
+                                backgroundColor: 'yellow',
                                 width: 30,
                                 height: 30
                             }}>?</Avatar> :
@@ -71,7 +71,7 @@ class Product extends React.Component {
                                 height: 30
                             }}>!</Avatar>
                     }
-                    <ProductInfo open={this.state.open} onClose={this.handleClose} item={this.props.itemInfo}/>
+                    <ProductInfo open={this.state.open} onClose={this.handleClose} item={this.props.itemInfo} />
                 </CardContent>
             </Card>
         );

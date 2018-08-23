@@ -1,9 +1,12 @@
 import React from 'react';
-import Typography from 'material-ui/Typography';
-import '../css/styles.css';
-import Paper from 'material-ui/Paper';
 
-const skincare_ingredients_to_avoid = ['глутамат натрия', 'нитрит натрия', 'аспартам', 'бензоат натрия',
+import Paper from 'material-ui/Paper';//https://material-ui.com/demos/paper/
+import Typography from 'material-ui/Typography';
+
+import '../css/styles.css';
+
+
+const harmful_ingredients = ['глутамат натрия', 'нитрит натрия', 'аспартам', 'бензоат натрия',
     'формальдегид', 'сульфиты', 'Е103', 'E107', 'E125', 'E127', 'E128', 'E140', 'E153'];
 
 const getHighlightedText = (text, higlight) => {
@@ -11,27 +14,27 @@ const getHighlightedText = (text, higlight) => {
     let parts = text.split(new RegExp(re, 'gi'));
     return <span> {parts.map((part, i) =>
         <span key={i}
-              style={higlight.some(function (item) {
-                  return part.toLowerCase() === item.toLowerCase()
-              })
-                  ? {
-                      backgroundColor: 'yellow',
-                  } : {}}>
+            style={higlight.some(function (item) {
+                return part.toLowerCase() === item.toLowerCase()
+            })
+                ? {
+                    backgroundColor: 'red',
+                } : {}}>
             {part}
         </span>)
     } </span>;
 };
 
 
-const ResultDisplay = ({length, onreturn, content, unsafe}) => {
+const ResultDisplay = ({ length, onreturn, content, unsafe }) => {
     if (length > 0) {
         let displayContent = getHighlightedText(content, unsafe);
         return (
             <div>
                 <div className="alert alert-danger fadeIn" role="alert">
-                    Небесопасно! Найдены вредные ингридиенты!
+                    Небезопасно! Найдены вредные ингридиенты!
                 </div>
-                <Paper elevation={4} style={{padding: '20px'}}>
+                <Paper elevation={4} style={{ padding: '20px' }}>
                     <Typography variant='body1' gutterBottom={true}>
                         {displayContent}
                     </Typography>
@@ -45,26 +48,26 @@ const ResultDisplay = ({length, onreturn, content, unsafe}) => {
                 <div className="alert alert-primary fadeIn" role="alert">
                     Безопасно! Вредные ингридиенты не найдены
                 </div>
-                <Paper elevation={4} style={{padding: '20px'}}>
+                <Paper elevation={4} style={{ padding: '20px' }}>
                     <Typography variant='body1' gutterBottom={true}>
                         {content}
                     </Typography>
                 </Paper>
-                <button className="btn btn-primary btn-lg btn-block" onClick={onreturn}>Проверить</button>
+                <button className="btn btn-primary btn-lg btn-block" onClick={onreturn}>Проверить еще?</button>
             </div>
         )
     }
 };
 
 
-const CheckDisplay = ({onChange, onClick, onPress}) =>
+const CheckDisplay = ({ onChange, onClick, onPress }) =>
 
     <form>
-        <Typography variant='display1' gutterBottom={true}>Инструмент проверки ингредиентов на вредность</Typography>
+        <Typography variant='title' gutterBottom={true}>Инструмент проверки ингредиентов на вредность</Typography>
         <textarea placeholder="Введите или вставьте ингридиенты продукта" onChange={onChange} autoFocus={true}
-                  className="form-control" onKeyPress={onPress} rows="5"/>
+            className="form-control" onKeyPress={onPress} rows="5" />
         <input type="button" onClick={onClick} className="btn btn-primary btn-lg btn-block"
-               value='Проверить'/>
+            value='Проверить' />
     </form>
 
 
@@ -86,7 +89,7 @@ class IngredientsCheck extends React.Component {
     checkIngre = (content) => {
         let contentlower = content.toLowerCase();
         let unsafeIng = [];
-        skincare_ingredients_to_avoid.forEach(function (ing) {
+        harmful_ingredients.forEach(function (ing) {
             if (contentlower.includes(ing)) {
                 unsafeIng.push(ing);
             }
@@ -94,20 +97,20 @@ class IngredientsCheck extends React.Component {
         return unsafeIng;
     };
 
-    onPress = (e) => {
+    onPress = (EO) => {
         const validation = /[a-zA-Z]/;
-        if (e.key === 'Enter' && validation.test(this.state.content)) {
+        if (EO.key === 'Enter' && validation.test(this.state.content)) {
             this.onclick(e)
         }
     };
 
-    onChange = (e) => {
+    onChange = (EO) => {
         this.setState({
-            content: e.target.value
+            content: EO.target.value
         })
     };
 
-    onclick = (e) => {
+    onclick = (EO) => {
         if (this.state.content !== '') {
             this.setState({
                 checked: true,
@@ -116,7 +119,7 @@ class IngredientsCheck extends React.Component {
         }
     };
 
-    onclickreturn = (e) => {
+    onclickreturn = (EO) => {
         this.setState({
             checked: false,
             content: ''
@@ -129,9 +132,9 @@ class IngredientsCheck extends React.Component {
                 {
                     this.state.checked ?
                         <ResultDisplay length={this.state.unsafe.length} onreturn={this.onclickreturn}
-                                       content={this.state.content}
-                                       unsafe={this.state.unsafe}/> :
-                        <CheckDisplay onChange={this.onChange} onClick={this.onclick} onPress={this.onPress}/>
+                            content={this.state.content}
+                            unsafe={this.state.unsafe} /> :
+                        <CheckDisplay onChange={this.onChange} onClick={this.onclick} onPress={this.onPress} />
                 }
             </div>
         );

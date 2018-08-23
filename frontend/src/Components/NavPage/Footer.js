@@ -1,12 +1,25 @@
 import React from 'react';
-import '../css/footer.css';
+
 import Typography from 'material-ui/Typography';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
+import '../css/footer.css';
+
+const theme = createMuiTheme({
+    palette: {
+        primary: {
+            main: '#ffffff',
+        },
+    },
+});
 
 const Footer = () =>
     <div className='footer'>
-        <Typography variant='body2'>
-            Дмитрий Гайдук 2018
+        <MuiThemeProvider theme={theme}>
+            <Typography variant='body2' color="primary">
+                Дмитрий Гайдук 2018
         </Typography>
+        </MuiThemeProvider>
     </div>;
 
 

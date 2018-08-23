@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-
 }
 
 .searchPageRoot {
@@ -22,7 +21,7 @@
 
 .searchpage {
     position: relative;
-    top: 40px;
+    top: 70px;
 }
 
 .loading {
@@ -84,6 +83,6 @@
 .inform-panel {
     position: fixed;
     left: 2%;
-    top: 40%;
+    top: 80%;
     opacity: 0.7;
 }

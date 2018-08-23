@@ -1,8 +1,9 @@
 import React from 'react';
-import '../css/styles.css';
+
 import SearchForm from '../SearchForm/SearchForm';
 import ProductContainer from './ProductContainer';
 
+import '../css/styles.css';
 
 const SearchPage = () =>
 

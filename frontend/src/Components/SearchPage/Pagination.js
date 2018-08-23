@@ -1,6 +1,10 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {updatePage} from "../../redux/actions/actions";
+
+import { connect } from 'react-redux';
+import { updatePage } from "../../redux/actions/actions";
+
+//import { NavigateNext } from 'material-ui-icons/NavigateNext';
+
 import '../css/styles.css';
 
 class Pagination extends React.Component {
@@ -34,20 +38,20 @@ class Pagination extends React.Component {
 
         if (this.props.totalCount === 0) {
             return (
-                <div/>
+                <div />
             )
         }
         let arr = [];
         let start, end;
         let mid = parseInt(this.props.pageNumber, 10);
-        if (this.props.totalCount < 6) {
+        if (this.props.totalCount < 2) {
             start = 1;
             end = this.props.totalCount;
         } else if (mid <= 3) {
             start = 1;
-            end = 6;
+            end = 2;
         } else if (mid >= this.props.totalCount - 3) {
-            start = this.props.totalCount - 6;
+            start = this.props.totalCount - 2;
             end = this.props.totalCount;
         } else {
             start = mid - 2;
@@ -60,7 +64,7 @@ class Pagination extends React.Component {
             <nav aria-label="Page navigation example">
                 <ul onClick={this.onClick} className="pagination justify-content-center">
                     <li className="page-item">
-                        <button className="btn">Previous</button>
+                        <button className="btn">Предыдущая</button>
                     </li>
                     {
                         arr.map(item => (
@@ -72,7 +76,7 @@ class Pagination extends React.Component {
                         ))
                     }
                     <li className="page-item">
-                        <button className="btn">Next</button>
+                        <button className="btn">Следующая</button>
                     </li>
                 </ul>
             </nav>

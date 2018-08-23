@@ -5,10 +5,10 @@ import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Ta
 
 import img from '../../Image/1_QERgzuzphdQz4e0fNs1CFQ.gif';
 
-import '../css/Home.css';
+//import '../css/Home.css';
 
 const About = () => (
-    <div className='container'>
+    <div className='home-box'>
         <Typography variant='title'>Образовательный центр Парка высоких технологий</Typography>
         <Typography variant='caption' gutterBottom={true}>Гайдук Д.А., Email: dementeyyy@gmail.comu</Typography>
         <Typography variant='title'>Выпускной проект</Typography>

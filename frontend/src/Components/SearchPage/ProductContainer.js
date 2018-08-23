@@ -52,19 +52,19 @@ class ProductContainer extends Component {
                     <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                         <Avatar style={{
                             margin: 10,
-                            backgroundColor: 'green',
+                            backgroundColor: 'yellow',
                             width: 30,
                             height: 30
                         }}>?</Avatar>
                         <Typography variant='caption'>
-                            НезнакомыЙ ингридиент
+                            Информация отсутствует
                         </Typography>
                     </div>
 
                     <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                         <Avatar style={{
                             margin: 10,
-                            backgroundColor: '#ff0000',
+                            backgroundColor: 'red',
                             width: 30,
                             height: 30
                         }}>!</Avatar>
@@ -80,7 +80,7 @@ class ProductContainer extends Component {
 }
 
 ProductContainer.propTypes = {
-    pageNumber: PropTypes.number,
+    //pageNumber: PropTypes.number,
     query: PropTypes.string,
     items: PropTypes.array.isRequired,
     hasErrored: PropTypes.bool,

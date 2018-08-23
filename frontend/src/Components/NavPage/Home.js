@@ -1,7 +1,9 @@
 import React from 'react';
 import SearchForm from '../SearchForm/SearchForm';
-import '../css/Home.css';
+
 import img from '../../Image/frontPage.png';
+
+import '../css/Home.css';
 
 const Home = () =>
     <div className="home-box">
