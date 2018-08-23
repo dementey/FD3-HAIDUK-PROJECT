@@ -51,7 +51,7 @@ export function getCount(url) {
 }
 
 export function query(url) {
-    console.log('function query(url) '+url);
+    // console.log('function query(url) '+url);
     return (dispatch) => {
         dispatch(itemsIsLoading(true));
 

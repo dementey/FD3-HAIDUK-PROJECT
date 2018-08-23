@@ -8,7 +8,7 @@ import '../../css/styles.css';
 const SearchPage = () =>
 
     <div className='searchpage'>
-        <SearchForm fire={false}/>
+        <SearchForm fire={false} />
         <br/>
         <ProductContainer/>
     </div>

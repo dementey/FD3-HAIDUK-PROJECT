@@ -8,7 +8,7 @@ import '../../css/Home.css';
 const Home = () =>
     <div className="home-box">
         <img src={img} alt="logo" className="home-logo"/>
-        <SearchForm fire={true}/>
+        <SearchForm fire={true} />
     </div>;
 
 

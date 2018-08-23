@@ -23,6 +23,7 @@ class SearchForm extends React.Component { //в этом компоненте т
         this.handleOnChange = this.handleOnChange.bind(this);
     };
 
+   // componentDidMount () {console.log(this.props.match.params.id)};
 
     handleSubmit(EO) {
         EO.preventDefault();
@@ -41,10 +42,10 @@ class SearchForm extends React.Component { //в этом компоненте т
     }
 
     render() {
-        //console.log(this.props);
+        console.log(this.props.match);
         return (
 
-            
+
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <div className='search-form-container'>
@@ -53,7 +54,7 @@ class SearchForm extends React.Component { //в этом компоненте т
                     </div>
                 </form>
                 {
-                    this.props.fire && this.state.fireRedirect &&(
+                    this.props.fire && this.state.fireRedirect && (
                         <Redirect to={'/search?' + this.state.val} />
                     )
                 }
@@ -63,7 +64,7 @@ class SearchForm extends React.Component { //в этом компоненте т
 }
 const mapStateToProps = function (state) {
     // этому компоненту ничего не нужно из хранилища Redux, необходим только для this.props.dispatch
-    return {}; 
+    return {};
 };
 
 export default connect(mapStateToProps)(SearchForm);
