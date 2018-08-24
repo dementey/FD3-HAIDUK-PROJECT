@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`работа IngredientsCheck 1`] = `
+<div
+  className="home-box container"
+>
+  <form>
+    <h2
+      className="MuiTypography-root-1 MuiTypography-title-7 MuiTypography-gutterBottom-18"
+    >
+      Инструмент проверки ингредиентов на вредность
+    </h2>
+    <textarea
+      autoFocus={true}
+      className="form-control"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="Введите или вставьте ингридиенты продукта"
+      rows="5"
+    />
+    <input
+      className="btn btn-primary btn-lg btn-block"
+      onClick={[Function]}
+      type="button"
+      value="Проверить"
+    />
+  </form>
+</div>
+`;
