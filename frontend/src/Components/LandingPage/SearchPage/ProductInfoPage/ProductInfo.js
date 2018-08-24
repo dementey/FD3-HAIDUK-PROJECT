@@ -46,15 +46,15 @@ class ProductInfo extends React.Component {
                             {
                                 item.ingredients[0] === 'None' ?
                                     <Typography color='primary' variant='body1'>
-                                        No ingredients information found.
+                                        Информация о ингридиенах не найдена
                                     </Typography> :
                                     !item.is_safe &&
                                     <div>
                                         <Typography color='secondary' variant='body1'>
-                                            This product is UNSAFE for pregnant women
+                                            Этот продукт является небезопасным!
                                         </Typography>
                                         <Typography color='secondary' variant='body1'>
-                                            Unsafe ingredients: {item.unsafe_ingredients}
+                                            Вредные ингридиенты: {item.unsafe_ingredients}
                                         </Typography>
                                     </div>
                             }

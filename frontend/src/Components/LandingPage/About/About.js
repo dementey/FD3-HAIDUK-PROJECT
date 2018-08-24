@@ -3,7 +3,8 @@ import React from 'react';
 import Typography from 'material-ui/Typography';
 import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
 
-import img from './1_QERgzuzphdQz4e0fNs1CFQ.gif';
+import img1 from './1_QERgzuzphdQz4e0fNs1CFQ.gif';
+import img2 from './structure.png';
 
 //import '../css/Home.css';
 
@@ -38,8 +39,9 @@ const About = () => (
         <Typography variant='body1' gutterBottom={true}>...
         </Typography>
 
-            <img src={img} alt="logo" className="home-logo" />
-
+            <img src={img1} alt="logo" className="home-logo" />
+            <Typography variant='body2'>Зависимость компонентов</Typography>
+            <img src={img2} alt="logo" className="home-logo" />
     </div>
 
 

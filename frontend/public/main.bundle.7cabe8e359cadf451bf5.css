@@ -172,14 +172,6 @@ li.nav-li:hover ~ li:before {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
 
-.PageLink {
-    color: black;
-    margin-right: 10px;
-}
-
-.ActivePageLink {
-    font-weight: bold;
-}
 /*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -329,4 +321,4 @@ li.nav-li:hover ~ li:before {
     src: url(f75569f8a5fab0893fa712d8c0d9c3fe.woff2) format('woff2'), url(cc2fadc3928f2f223418887111947b40.woff) format('woff');
 }
 
-/*# sourceMappingURL=main.bundle.1f4a262e57997c93549f.css.map*/
+/*# sourceMappingURL=main.bundle.7cabe8e359cadf451bf5.css.map*/
