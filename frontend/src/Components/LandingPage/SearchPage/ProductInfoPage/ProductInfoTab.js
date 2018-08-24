@@ -8,7 +8,7 @@ import AppBar from 'material-ui/AppBar';
 import Tabs, { Tab } from 'material-ui/Tabs';
 import Typography from 'material-ui/Typography';
 
-import uuid from 'uuid/v4';
+import uuid from 'uuid/v4';//генератор индивидуальных key
 
 function TabContainer({ children, dir }) {
     return (
@@ -49,7 +49,7 @@ class FullWidthTabs extends React.Component {
 
     render() {
         const { classes, theme, itemInfo } = this.props;
-
+        console.log(this.props);
         return (
             <div className={classes.root}>
                 <AppBar position="static" color="default">
@@ -99,8 +99,8 @@ class FullWidthTabs extends React.Component {
 
 FullWidthTabs.propTypes = {
     classes: PropTypes.object.isRequired,
-    theme: PropTypes.object.isRequired,
-    itemInfo: PropTypes.object.isRequired
+    itemInfo: PropTypes.object.isRequired,
+    theme: PropTypes.object.isRequired
 };
 
 export default withStyles(styles, { withTheme: true })(FullWidthTabs);

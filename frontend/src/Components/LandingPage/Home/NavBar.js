@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../css/Navbar.css';
+
+import '../../css/navbar.css';
 
 import Button from 'material-ui/Button';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';

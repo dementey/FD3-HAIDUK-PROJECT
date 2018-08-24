@@ -12,6 +12,7 @@ import '../../../css/styles.css';
 class ProductInfo extends React.Component {
 
     render() {
+        //console.log(item);
         const { item, open, onClose } = this.props;
         const imageUrl = 'https://' + item.image
         return (

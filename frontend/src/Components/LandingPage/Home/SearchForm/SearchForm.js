@@ -23,7 +23,7 @@ class SearchForm extends React.Component { //в этом компоненте т
         this.handleOnChange = this.handleOnChange.bind(this);
     };
 
-   // componentDidMount () {console.log(this.props.match.params.id)};
+    // componentDidMount () {console.log(this.props.match.params.id)};
 
     handleSubmit(EO) {
         EO.preventDefault();
@@ -34,7 +34,6 @@ class SearchForm extends React.Component { //в этом компоненте т
     }
 
     handleOnChange(EO) {
-        //console.log('handleOnChange  ' + EO.target.value);
         EO.preventDefault();
         this.setState({
             val: EO.target.value

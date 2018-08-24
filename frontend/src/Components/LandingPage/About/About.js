@@ -6,8 +6,6 @@ import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Ta
 import img1 from './1_QERgzuzphdQz4e0fNs1CFQ.gif';
 import img2 from './structure.png';
 
-//import '../css/Home.css';
-
 const About = () => (
     <div className='home-box'>
         <Typography variant='title'>Образовательный центр Парка высоких технологий</Typography>
@@ -39,9 +37,9 @@ const About = () => (
         <Typography variant='body1' gutterBottom={true}>...
         </Typography>
 
-            <img src={img1} alt="logo" className="home-logo" />
-            <Typography variant='body2'>Зависимость компонентов</Typography>
-            <img src={img2} alt="logo" className="home-logo" />
+        <img src={img1} alt="logo" className="home-logo" />
+        <Typography variant='body2'>Зависимость компонентов</Typography>
+        <img src={img2} alt="logo" className="home-logo" />
     </div>
 
 
