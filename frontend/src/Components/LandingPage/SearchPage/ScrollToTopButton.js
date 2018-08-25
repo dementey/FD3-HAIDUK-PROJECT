@@ -23,6 +23,7 @@ class ScrollButton extends React.Component {
     }
 
     render() {
+        console.log(this.props);
         return (
             <button title='Back to top' className="hvr-pulse-grow"
                 onClick={() => {

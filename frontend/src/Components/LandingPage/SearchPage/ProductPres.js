@@ -15,17 +15,8 @@ import '../../css/styles.css';
 
 class ProductPres extends Component {
 
-    // componentDidMount() {
-    //     window.addEventListener('scroll', this.props.handleScroll);
-    // }
-
-    // componentWillUnmount() {
-    //     window.removeEventListener('scroll', this.props.handleScroll);
-    // }
 
     render() {
-
-        //console.log('ProductPres this.props ' + this.props)
         const { result, items, hasErrored, isLoading, totalCount } = this.props;//присваиваем одноименным переменным соотсветсвующие значения props синтаксис ES6
 
         const col = window.innerWidth < 600 ? 1 : 4;//Количество столбцов
