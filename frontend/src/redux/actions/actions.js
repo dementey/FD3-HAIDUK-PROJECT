@@ -1,46 +1,46 @@
-export function itemsHasErrored(bool) {
+export function itemsHasErrored(bool) {//ошибка загрузки
     return {
         type: 'ITEMS_HAS_ERRORED',
         hasErrored: bool
     };
 }
 
-export function itemsIsLoading(bool) {
+export function itemsIsLoading(bool) {//состояние загрузки для CircularProgress
     return {
         type: 'ITEMS_IS_LOADING',
         isLoading: bool
     };
 }
 
-export function updatePage(page) {
+export function updatePage(page) {//обновление страници при пагинации
     return {
         type: 'UPDATE_PAGE',
         pageNumber: page
     };
 }
 
-export function itemsFetchDataSuccess(items) {
+export function itemsFetchDataSuccess(items) {//получение данных
     return {
         type: 'ITEMS_FETCH_DATA_SUCCESS',
         items: items
     };
 }
 
-export function sendQuery(valueSearch) {
+export function sendQuery(valueSearch) { //отправить запрос
     return {
         type: 'SEND_QUERY',
         query: valueSearch
     };
 }
 
-export function getCountAction(count) {
+export function getCountAction(count) {//запросить количество элементов
     return {
         type: 'GET_COUNT',
         count: count
     };
 }
 
-export function getCount(url) {
+export function getCount(url) {//запросить количество элементов
 
     return (dispatch) => {
         fetch(url)
@@ -50,7 +50,7 @@ export function getCount(url) {
     };
 }
 
-export function query(url) {
+export function query(url) {//запрос возвращает json
     // console.log('function query(url) '+url);
     return (dispatch) => {
         dispatch(itemsIsLoading(true));
