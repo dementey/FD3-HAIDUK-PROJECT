@@ -4,7 +4,7 @@
   "description": "стартовый проект на React",
   "main": "app.js",
   "scripts": {
-    "builddev": "cross-env NODE_ENV=development .//node_modules//.bin//webpack-dev-server --progress --colors --history-api-fallback",
+    "builddev": "cross-env NODE_ENV=development .//node_modules//.bin//webpack-dev-server --progress --colors --history-api-fallback --open",
     "buildprod": "cross-env NODE_ENV=production .//node_modules//.bin//webpack --progress",
     "browse": ".\\node_modules\\.bin\\lite-server",
     "test": "jest --env=jsdom --setupTestFrameworkScriptFile=raf/polyfill"
